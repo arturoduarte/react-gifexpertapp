@@ -10,14 +10,11 @@ export const GifGrid = ({ category }) => {
   // useFetchGifs --> es un customHooks
   const {data:images, loading} = useFetchGifs(category);
       
+  {/* iteramos cada valor del hash images*/}
   return (
     <>
-      <h3 className="animate__animated animate__fadeIn">{ category }</h3>
-      
-      {loading && <p className="animate__animated animate__flash">loading...</p>}
-      
-        {/* iteramos cada valor del hash */}
-
+      <h3 className="animate__animated animate__fadeIn">{ category }</h3>      
+      {loading && <p className="animate__animated animate__flash">loading...</p>}      
       <div className="card-grid">        
           {
             images.map( image => (            
@@ -26,8 +23,7 @@ export const GifGrid = ({ category }) => {
                 img= {image} 
               />
             ))
-        }
-        
+        }        
       </div>
     </>
   )

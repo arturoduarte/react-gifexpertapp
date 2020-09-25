@@ -21,8 +21,5 @@ export const getGifs = async(category) => {
 
 
   return gifs;
-
-  // console.log(gifs);
-  // almacenamos los valores en setImages
-  // setImages(gifs)        
+  
 }
